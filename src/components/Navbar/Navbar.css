@@ -1,0 +1,70 @@
+.background{
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    width: 100vw;
+    height: 2rem;
+    background-color: white;
+}
+.headercontainer{
+    position: fixed;
+    top: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 2px solid rgb(231, 231, 231);
+    border-radius: 31px 31px 0px 0px;
+    margin-right: 5.3px;
+    padding: 5px 30px 10px 30px;
+    width: calc(100% - 71px);
+    background-color: white;
+}
+
+.headercontainer .logo {
+    width: 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    /* border: 1px solid red; */
+}
+
+.headercontainer .items {
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    justify-content: start;
+}
+
+.headercontainer .items ul {
+    display: flex;
+    gap: 5rem;
+    flex-direction: row;
+    margin: 0px;
+    padding: 0px;
+}
+
+.headercontainer .items li {
+    width: max-content;
+    font-size: 0.9rem;
+    font-family: 'Samim-Re';
+    list-style: none;
+    text-decoration: none;
+}
+.headercontainer .items li a{
+    text-decoration: none;
+    color: rgb(61, 61, 61);
+    transition: all ease 0.3s;
+}
+.headercontainer .items li a:hover {
+    color: black;
+    font-weight: 600;
+}
+
+.headercontainer .items li a.active {
+    color: black;
+    font-weight: 600;
+    text-shadow: 0px 0px 15px rgb(133, 133, 133);
+    transition: all ease 0.3s;
+}

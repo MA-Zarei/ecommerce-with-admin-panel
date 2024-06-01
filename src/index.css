@@ -1,7 +1,19 @@
+@font-face {
+  font-family: 'Samim-Re';
+  src: local('Samim-FD'), url('./fonts/Samim-FD.woff') format('woff');
+}
+@font-face {
+  font-family: 'Samim-B';
+  src: local('Samim-Bold-FD'), url(./fonts/Samim-Bold-FD.woff) format('woff');
+}
+
+
 body {
+  font-family: 'Samim-Re';
   margin: 0;
+  direction: rtl;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', 'Samim-Re', 'Samim-B'
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

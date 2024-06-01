@@ -1,0 +1,13 @@
+.maincontainer {
+    border: 1px solid rgb(231, 231, 231);
+    border-radius: 35px;
+    box-sizing: border-box;
+    margin: 5px;
+    padding: 0px 30px;
+    min-height: 177vh;
+    background-color: white;
+}
+
+.maincontainer .layoutnav {
+    /* margin: 10px 0px 10px 0px; */
+}
