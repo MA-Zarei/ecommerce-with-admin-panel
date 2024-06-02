@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Navbar.css";
 import { NavLink } from "react-router-dom";
 
@@ -6,7 +6,7 @@ export default function Navbar() {
   const navItems = [
     {
       itemName: "فروشگاه",
-      itemLink: "/",
+      itemLink: "/shop",
     },
     {
       itemName: "درباره ما",
@@ -14,23 +14,37 @@ export default function Navbar() {
     },
     {
       itemName: "جستجو",
-      itemLink: "/",
+      itemLink: "/search",
     },
     {
       itemName: "حساب کاربری",
-      itemLink: "/",
+      itemLink: "/account",
     },
     {
       itemName: "سبد خرید",
-      itemLink: "/",
+      itemLink: "/cart",
     },
   ];
-  navItems.map((item, index) => {
-    console.log(item);
-  });
+
+  const [scrolled, setScrolled] = useState(false);
+  useEffect(() => {
+    const handleScroll = () => {
+      console.log(window.scrollY);
+      if (window.scrollY > 5) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <div className="background">
-      <div className="headercontainer">
+    <div className={scrolled ? "background" : ""}>
+      <div className={scrolled ? "headercontainerfixed" : "headercontainer"}>
         <div className="items">
           <nav>
             <ul>
@@ -47,7 +61,9 @@ export default function Navbar() {
             </ul>
           </nav>
         </div>
-        <div className="logo">Logo</div>
+        <div className="logo">
+          <a href="/">Logo</a>
+        </div>
       </div>
     </div>
   );
