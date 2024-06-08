@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./Navbar.css";
 import { NavLink } from "react-router-dom";
 
-export default function Navbar() {
+export default function Navbar({ scrollVar }) {
   const navItems = [
     {
       itemName: "فروشگاه",
@@ -25,26 +25,28 @@ export default function Navbar() {
       itemLink: "/cart",
     },
   ];
-
-  const [scrolled, setScrolled] = useState(false);
-  useEffect(() => {
-    const handleScroll = () => {
-      console.log(window.scrollY);
-      if (window.scrollY > 5) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+  // console.log(scrollVar.scrolled)
+  // const [navscrolled, setNavScrolled] = useState(false);
+  // const handleScroll = () => {
+  //   console.log(window.scrollY);
+  //   if (window.scrollY > 5) {
+  //     setNavScrolled(true);
+  //     setScrolled(true);
+  //   } else {
+  //     setNavScrolled(false);
+  //     setScrolled(false);
+  //   }
+  // };
+  // useEffect(() => {
+  //   window.addEventListener("scroll", handleScroll);
+  //   return () => {
+  //     window.removeEventListener("scroll", handleScroll);
+  //   };
+  // }, []);
 
   return (
-    <div className={scrolled ? "background" : ""}>
-      <div className={scrolled ? "headercontainerfixed" : "headercontainer"}>
+    <div className={scrollVar ? "background" : ""}>
+      <div className={scrollVar ? "headercontainerfixed" : "headercontainer"}>
         <div className="items">
           <nav>
             <ul>

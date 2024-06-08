@@ -1,14 +1,19 @@
 .maincontainer {
-    border: 1px solid rgb(231, 231, 231);
-    /* border-top: none; */
-    border-radius: 35px;
-    box-sizing: border-box;
-    margin: 5px;
-    padding: 0px 30px;
-    min-height: 177vh;
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    overflow-x: hidden;
+  border: 1px solid rgb(231, 231, 231);
+  /* border-top: none; */
+  border-radius: 35px;
+  box-sizing: border-box;
+  margin: 5px;
+  padding: 0px 30px;
+  min-height: 177vh;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  overflow-x: hidden;
+}
+.maincontainer .contentScrolled {
+    margin-top: 2rem;
+    /* border: 1px solid black; */
+    /* transition: all ease 0.1s; */
 }
