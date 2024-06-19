@@ -5,23 +5,23 @@ import { NavLink } from "react-router-dom";
 export default function Navbar({ scrollVar }) {
   const navItems = [
     {
-      itemName: "فروشگاه",
+      itemName: "shop",
       itemLink: "/shop",
     },
     {
-      itemName: "درباره ما",
+      itemName: "About",
       itemLink: "/aboutus",
     },
     {
-      itemName: "جستجو",
+      itemName: "Search",
       itemLink: "/search",
     },
     {
-      itemName: "حساب کاربری",
+      itemName: "Account",
       itemLink: "/account",
     },
     {
-      itemName: "سبد خرید",
+      itemName: "Cart",
       itemLink: "/cart",
     },
   ];
@@ -47,6 +47,15 @@ export default function Navbar({ scrollVar }) {
   return (
     <div className={scrollVar ? "background" : ""}>
       <div className={scrollVar ? "headercontainerfixed" : "headercontainer"}>
+        <div className="bg"></div>
+        <div className="logo">
+          <NavLink
+            className={({ isActive }) => (isActive ? "active" : "")}
+            to={"/"}
+          > 
+            Logo
+          </NavLink>{" "}
+        </div>
         <div className="items">
           <nav>
             <ul>
@@ -62,9 +71,6 @@ export default function Navbar({ scrollVar }) {
               ))}
             </ul>
           </nav>
-        </div>
-        <div className="logo">
-          <a href="/">Logo</a>
         </div>
       </div>
     </div>

@@ -11,7 +11,7 @@
 body {
   font-family: 'Samim-Re';
   margin: 0;
-  direction: rtl;
+  direction: ltr;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', 'Samim-Re', 'Samim-B'
     sans-serif;

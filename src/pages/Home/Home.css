@@ -1,0 +1,27 @@
+.homeContainer {
+  border: 1px solid black;
+  width: 100%;
+}
+.homeContainer > .Home-Banner {
+  background-color: rgb(211, 234, 255);
+  border-radius: 31px;
+  width: 96%;
+  height: 50vh;
+  padding: 8px 16px;
+  border: 1px solid red;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.banner-picture{
+    width: 50%;
+    border: 1px solid red;
+}
+.banner-content{
+    padding: 8px 16px;
+    width: 45%;
+    border: 1px solid red;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}

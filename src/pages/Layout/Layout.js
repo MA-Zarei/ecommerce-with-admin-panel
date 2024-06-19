@@ -7,7 +7,7 @@ export default function Layout() {
   const [scrolled, setScrolled] = useState(false);
   const handleScroll = () => {
     // console.log(window.scrollY);
-    if (window.scrollY > 5) {
+    if (window.scrollY > 0) {
       setScrolled(true);
       setScrolled(true);
     } else {
