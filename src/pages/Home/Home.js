@@ -1,18 +1,11 @@
 import React from 'react'
 import './Home.css'
+import Slider from '../../components/Slider/Slider'
 
 export default function Home() {
   return (
     <div className='homeContainer'>
-      <div className='Home-Banner'>
-        <div className='banner-picture'>
-          picture
-        </div>
-        <div className='banner-content'>
-          <div>desc</div>
-          <div>product-component</div>
-        </div>
-      </div>
+      <Slider />
     </div>
   )
 }
